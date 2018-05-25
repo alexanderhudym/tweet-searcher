@@ -3,6 +3,12 @@ Library to bypass limitations of the Twitter Official API
 
 Inspired by https://github.com/Jefferson-Henrique/GetOldTweets-python
 
+# Instalation
+
+```
+pip install tweetsearcher
+```
+
 # Usage
 Simple download 200 on the search query "trump" since 2017-01-01 and until 2018-01-01:
 
