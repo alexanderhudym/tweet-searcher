@@ -1,5 +1,5 @@
 # tweet-searcher
-Library to bypass limitations of the Twitter Official API
+This library bypass limitations of the Twitter Official API
 
 Inspired by https://github.com/Jefferson-Henrique/GetOldTweets-python
 
