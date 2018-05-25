@@ -32,7 +32,7 @@ With proxy:
 
 ```python
 from tweetsearcher import TweetSearcher
-searcher = TweetSearcher(proxy='socks5h://51.15.100.63:1080')
+searcher = TweetSearcher(proxy='socks5h://60.50.251.54:8181')
 tweets, cursor = searcher.tweets_to_csv('trump', since='2017-01-01', until='2018-01-01', max_tweets=200)
 print(tweets, cursor)
 ```
