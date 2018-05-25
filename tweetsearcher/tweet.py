@@ -8,8 +8,8 @@ class Tweet:
     def __init__(self, id=0, text='', datetime=datetime.now(), link='', retweets=0, favorites=0,
                  username='', user_id=0, user_link=''):
         self.id = id
-        self.text = text
         self.datetime = datetime
+        self.text = text
         self.link = link
         self.retweets = retweets
         self.favorites = favorites
@@ -45,8 +45,8 @@ class Tweet:
                         .find('span', {'class': 'ProfileTweet-actionCount'}) \
                         .get('data-tweet-stat-count'))
         return Tweet(id=int(tweet.get('data-tweet-id')),
-                     text=text,
                      datetime=datetime.fromtimestamp(timestamp),
+                     text=text,
                      link=tweet.get('data-permalink-path'),
                      retweets=retweets,
                      favorites=favorites,
