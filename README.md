@@ -35,7 +35,7 @@ Custom headers:
 
 ```python
 searcher = TweetSearcher(headers={
-	'Host': "twitter.com",
+    'Host': "twitter.com",
     'User-Agent': 'Chrome/66.0.3359.181',
     'Accept': "application/json, text/javascript, */*; q=0.01",
     'Accept-Language': "de,en-US;q=0.7,en;q=0.3",
