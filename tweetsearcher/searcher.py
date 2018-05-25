@@ -102,12 +102,17 @@ class TweetSearcher():
         while True:
             try:
                 tweets, next_cursor = self.get_tweets(q, since, until, f, 100, username, lang, cursor)
-                if not path.exists(file_name): open(file_name, 'a').write(';'.join(tweets[0].__dict__.keys()))
+
+                if not path.exists(file_name):
+                    with open(file_name, 'a') as f:
+                        f.write(';'.join(tweets[0].__dict__.keys()))
+
                 with open(file_name, 'a') as file:
                     for t in tweets:
                         total_tweets.append(t)
                         file.write('\n')
                         file.write(';'.join(str(v) for v in t.__dict__.values()))
+                        
                 cursor = next_cursor
 
                 last_datetime = total_tweets[len(total_tweets) - 1].datetime
